@@ -1,0 +1,39 @@
+@import "../../assets/constant.scss";
+.main-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: $nav-height;
+  width: 100%;
+  background-color: #fff;
+  .main-page-header {
+    width: 100%;
+    height: 40vh;
+  }
+  .main-page-service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .main-page-wrapper {
+    .main-page-header {
+      height: 90vh;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .main-page-wrapper {
+    .main-page-header {
+      height: 70vh;
+    }
+  }
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .main-page-wrapper {
+    .main-page-header {
+      height: 70vh;
+    }
+  }
+}

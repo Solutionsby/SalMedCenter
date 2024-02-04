@@ -1,0 +1,141 @@
+@import "../../assets/constant.scss";
+
+.service-page-wrapper {
+  width: 100%;
+  margin-top: $nav-height;
+  .service-component {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    .services-component-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      background-color: $primary-color;
+      height: 40vh;
+      width: 90%;
+      transition: 0.8s;
+      &:hover {
+        box-sizing: border-box;
+        border: 2px solid $primary-color;
+        background-color: #fff;
+        .services-links {
+          .service-icon {
+            color: $primary-color;
+          }
+          .service-texts {
+            color: $primary-color;
+          }
+        }
+      }
+      .services-links {
+        height: 100%;
+        width: 100%;
+        .service-icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 40%;
+          width: 100%;
+          font-size: 45px;
+          overflow: hidden;
+          color: white;
+        }
+        .service-texts {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          height: 60%;
+          font-size: 18px;
+          color: white;
+          font-family: $font;
+          p {
+            font-size: 12px;
+            font-family: $secendary-font;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) and (orientation: landscape) {
+  .service-page-wrapper {
+    margin-top: $nav-height-landscape;
+    .service-component {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .services-component-wrapper {
+        height: 50vh;
+        width: 45%;
+        .services-links {
+          height: 100%;
+          width: 100%;
+          .service-texts {
+            p {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .service-page-wrapper {
+    margin-top: $nav-height;
+    .service-component {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .services-component-wrapper {
+        height: 35vh;
+        width: 45%;
+        .services-links {
+          .service-icon {
+            height: 40%;
+            font-size: 40px;
+          }
+          .service-texts {
+            height: 60%;
+            font-size: 18px;
+            p {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) and (orientation: landscape) {
+  .service-page-wrapper {
+    margin-top: $nav-height;
+    .service-component {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      .services-component-wrapper {
+        height: 28vh;
+        width: 45%;
+        .services-links {
+          .service-icon {
+            height: 40%;
+            font-size: 70px;
+          }
+          .service-texts {
+            height: 60%;
+            font-size: 24px;
+            p {
+              font-size: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
