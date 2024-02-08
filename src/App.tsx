@@ -25,6 +25,9 @@ import {
   faEnvelope,
   faMapMarkerAlt,
   faClinicMedical,
+  faCannabis,
+  faFileMedical,
+  faHandHoldingMedical
 } from "@fortawesome/free-solid-svg-icons";
 import translationEN from "./locales/en/translation.json";
 import translationPL from "./locales/pl/translation.json";
@@ -55,7 +58,10 @@ library.add(
   faMobileAlt,
   faEnvelope,
   faMapMarkerAlt,
-  faClinicMedical
+  faClinicMedical,
+  faCannabis,
+  faFileMedical,
+  faHandHoldingMedical
 );
 
 function App() {

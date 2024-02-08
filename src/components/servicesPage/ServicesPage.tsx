@@ -11,15 +11,14 @@ export const ServicePage = () => {
     <div className="service-page-wrapper">
       <div className="service-component">
         {services.map(
-          ({ id, fontAwsomeIcon, nameKey, descriptionKey, linkPath }) => (
+          ({ id, fontAwsomeIcon, descriptionKey, linkPath }) => (
             <div key={id} className="services-component-wrapper">
               <Link to={linkPath} className="services-links">
                 <div className="service-icon">
                   <FontAwesomeIcon icon={fontAwsomeIcon as IconProp} />
                 </div>
                 <div className="service-texts">
-                  <div className="service-name">{t(nameKey)}</div>
-                  <div className="service-description">{t(descriptionKey)}</div>
+                  <h2 className="service-description">{t(descriptionKey)}</h2>
                   <p>{t("services.more")}</p>
                 </div>
               </Link>
