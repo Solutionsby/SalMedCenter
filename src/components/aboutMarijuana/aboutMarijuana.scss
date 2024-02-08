@@ -1,0 +1,23 @@
+@import "../../assets/constant.scss";
+.about-marijuana-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 1vh 10%;
+    justify-content: start;
+    align-items: start;
+    h1{
+        color:$primary-color;
+        text-align: start;
+    }
+    .about-marijuana-wrapper-paragraf{
+        display: flex;
+        flex-direction: column;
+        p{
+            text-align: justify;
+            margin-top: 2vh;
+        }
+
+    }
+
+}

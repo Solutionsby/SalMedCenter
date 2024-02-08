@@ -6,6 +6,7 @@ import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import "./mainPage.scss";
+import { AboutMarijuana } from "../aboutMarijuana/AboutMarijuana";
 
 export const MainPage: React.FC = () => {
   const location = useLocation();
@@ -119,6 +120,9 @@ export const MainPage: React.FC = () => {
       </Helmet>
       <div className="main-page-header">
         <Slider />
+      </div>
+      <div className="main-info-medicinal-marijuana">
+        <AboutMarijuana />
       </div>
       <div className="main-page-service" id="serviceSection">
         <ServicePage />
