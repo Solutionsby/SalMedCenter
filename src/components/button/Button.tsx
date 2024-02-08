@@ -1,26 +1,18 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import icons from "../db/icons.json";
-import "./button.scss";
-interface ButtonProps {
-  children: string;
-  classname: string;
-  telephon: string;
+import './button.scss'
+import { Link } from 'react-router-dom';
+
+interface Props {
+    className: string;
+    children: string;
+    link:string;
+    linkActive:boolean;
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  children,
-  classname,
-  telephon,
-}) => {
-  return (
-    <div className={`button-wrapper ${classname}`}>
-      <button className="button-call">
-        <a href={`tel:+48${telephon}`}>
-          <FontAwesomeIcon icon={icons.telephone as IconProp} />
-          {children}
-        </a>
-      </button>
-    </div>
-  );
-};
+export const Button: React.FC<Props> = ({className,linkActive,link,children}) =>{
+    return(
+        <div className={`button-wrapper ${className}`}>
+            {linkActive ? <Link to={link}>{children}</Link> :
+             <a href={link}>{children}</a>}
+        </div>
+    )
+}

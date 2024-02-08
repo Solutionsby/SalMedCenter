@@ -1,45 +1,20 @@
 @import "../../assets/constant.scss";
-.button-wrapper {
-  display: flex;
-  height: 5vh;
-  width: 40%;
-  transition: 0.8s;
-  margin: 10px 0;
-  background-color: white;
-  border-radius: 10px;
-  button.button-call {
-    display: flex;
-    box-sizing: border-box;
-    border-radius: 10px;
-    background: none;
-    background-position: 0;
-    color: $primary-color;
+
+.button-wrapper{
+    a{  display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color:$secendary-color;
+    }
+}
+
+.button-wrapper.treatment{
+    border-radius: $border;
+    background-color: $primary-color;
+    color: $secendary-color;
+    margin-top: 2vh;
+    height: 20vh;
     width: 100%;
-    height: 100%;
-    max-width: none;
-    transition: 1s;
-    font-size: 24px;
-    font-weight: bold;
-    &:hover {
-      background-color: $primary-color;
-      border-color: white;
-      color: white;
-    }
-    a {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: $primary-color;
-      width: 100%;
-      height: 100%;
-      transition: 1s;
-      &:hover {
-        border-color: white;
-        color: white;
-      }
-      svg {
-        margin-right: 5%;
-      }
-    }
-  }
 }

@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { Button } from "../button/Button";
+import { ButtonContact} from "../buttonContact/ButtonContact";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import icons from "../db/icons.json";
@@ -16,9 +16,9 @@ export const Footer = () => {
         {t("privacyPolicy.policy")}
       </Link>
       <div className="footer-contact">
-        <Button classname={"footer-button"} telephon={contact.telephone}>
+        <ButtonContact classname={"footer-button"} telephon={contact.telephone}>
           {t("buttonText.reservation")}
-        </Button>
+        </ButtonContact>
         <a href={`tel:+48${contact.telephone}`}>
           <div className="footer-contat-links">
             <FontAwesomeIcon icon={icons.telephone as IconProp} />

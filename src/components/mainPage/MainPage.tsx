@@ -7,6 +7,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import "./mainPage.scss";
 import { AboutMarijuana } from "../aboutMarijuana/AboutMarijuana";
+import { Treatment } from "../treatment/Treatment"
 
 export const MainPage: React.FC = () => {
   const location = useLocation();
@@ -129,6 +130,9 @@ export const MainPage: React.FC = () => {
       </div>
       <div className="aboutMe" id="aboutMeSection">
         <AboutMe />
+      </div>
+      <div className="treatment">
+      <Treatment />
       </div>
     </div>
   );

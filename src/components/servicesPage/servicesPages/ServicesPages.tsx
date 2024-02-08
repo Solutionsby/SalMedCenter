@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Header } from "../../header/Header";
-import { Button } from "../../button/Button";
+import { ButtonContact } from "../../buttonContact/ButtonContact";
 import contact from "../../db/contact.json";
 import "./servicesPages.scss";
 
@@ -44,9 +44,9 @@ export const ServicesPages: React.FC<priceObject> = ({ price, content }) => {
             <h3>{price.priceWeekend}</h3>
           </div>
         </div>
-        <Button classname={"services-button"} telephon={contact.telephone}>
+        <ButtonContact classname={"services-button"} telephon={contact.telephone}>
           {t("buttonText.reservation")}
-        </Button>
+        </ButtonContact>
       </div>
     </div>
   );
