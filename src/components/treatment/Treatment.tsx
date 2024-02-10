@@ -5,8 +5,8 @@ import {Button} from "../button/Button"
 export const Treatment = () =>{
     return(
         <div className="treatment-wrapper">
-        <Button className={"treatment"} linkActive={true} link={"/"}>Test1</Button>
-        <Button className={"treatment"} linkActive={false} link={"/"}>Test2</Button>
+        <Button className={"treatment"} linkActive={true} link={"/"}>Wskazania do leczenia</Button>
+        <Button className={"treatment"} linkActive={false} link={"/"}>Przeciwskazania do leczenia</Button>
         </div>
     )
 }
