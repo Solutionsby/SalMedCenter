@@ -27,12 +27,14 @@ import {
   faClinicMedical,
   faCannabis,
   faFileMedical,
-  faHandHoldingMedical
+  faHandHoldingMedical,
+  faTriangleExclamation
 } from "@fortawesome/free-solid-svg-icons";
 import translationEN from "./locales/en/translation.json";
 import translationPL from "./locales/pl/translation.json";
 import ScrollToTopEffect from "./assets/ScrollToTop";
 import "./App.css";
+import { Indications } from "./components/treatment/indicationsForTreatment/IndicationsForTreatment";
 
 const currentUrl = document.location.search;
 const urlParams = new URLSearchParams(currentUrl);
@@ -61,7 +63,8 @@ library.add(
   faClinicMedical,
   faCannabis,
   faFileMedical,
-  faHandHoldingMedical
+  faHandHoldingMedical,
+  faTriangleExclamation
 );
 
 function App() {
@@ -144,6 +147,7 @@ function App() {
               />
             }
           />
+          <Route path="indications" element={<Indications />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <PrivacyPolicy
