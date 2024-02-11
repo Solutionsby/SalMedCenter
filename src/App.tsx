@@ -148,6 +148,8 @@ function App() {
             }
           />
           <Route path="indications" element={<Indications />} />
+
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
         <PrivacyPolicy
