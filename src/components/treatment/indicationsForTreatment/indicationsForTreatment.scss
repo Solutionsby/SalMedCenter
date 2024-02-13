@@ -1,0 +1,92 @@
+@import "../../../assets/constant.scss";
+.indications-wrapper{
+    margin-top: 10vh;
+    .warning{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        border-radius: $border;
+        width: 90%;
+        height: 50vh;
+        margin: 2vh 5%;
+        background-color: red;
+        color:white;
+    }
+}
+
+.warning-wrapper{
+    display: flex;
+    transition: 2s;
+    &.active{
+        position: fixed;
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        background-color: rgba(0,0,0, 0.5) ;
+    }
+}
+
+.close-pop-up.visible{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    top:2.5vh;
+    right: 8%;
+    height: 50px;
+    width: 50px;
+
+    background-color: white;
+    border-radius: 50%;
+    div{
+        width: 60%;
+        height: 2px;
+        background-color: black;
+        transform:rotate(135deg);
+        &:nth-of-type(1){
+            transform: rotate(45deg) translate(1px,1px);
+        }
+    }
+    
+}
+.close-pop-up{
+    display: none;
+
+}
+.important{
+    display: flex;
+    gap:2vw;
+    align-items: center;
+    width: 90%;
+}
+.warning-icon{
+    font-size: 5vh;
+}
+.warning-paragraf{
+    width: 80%;
+    text-align: justify;
+    font-weight: bold;
+    font-size: 2.5vh ;
+}
+
+.diseases-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap:10px;
+    width: 90%;
+    margin: 2vh 5%;
+    .disases-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 45%;
+        height: 10vh;
+        background-color: $primary-color;
+        border-radius: $border;
+    }
+}
