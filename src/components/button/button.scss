@@ -4,7 +4,7 @@
     a{  display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 99%;
         height: 100%;
         color:$secendary-color;
     }
@@ -25,4 +25,14 @@
     margin: 2vh 5%;
     border-radius: $border;
 
+}
+.button-wrapper.disases-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    height: 10vh;
+    background-color: $primary-color;
+    border-radius: $border;
+    font-size: 2.1vh;
 }

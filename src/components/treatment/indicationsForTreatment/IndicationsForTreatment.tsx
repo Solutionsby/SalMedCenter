@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from 'react';
-import { Link } from "react-router-dom";
 import './indicationsForTreatment.scss';
 import { Button } from '../../button/Button';
 
@@ -27,7 +26,6 @@ export const Indications =()=>{
         localStorage.setItem('popupDisplayed', 'true');
         setPopupDisplayed(false)
     }
-    console.log(diseases[1])
     return (
         <div className="indications-wrapper">
             <Header image={"/img/headers/Treatment/Indications/Indications.jpg"} />
@@ -49,9 +47,7 @@ export const Indications =()=>{
             </div>
             <div className="indications-header"><h2>Lista Schorzeń, w których terapia Marihuaną może przyniesć korzyści</h2></div>
             <div className="diseases-list">{diseases.map(({id,title,path})=>(
-                <div key={id} className="disases-wrapper">
-                <Button className={"disases-button"} linkActive={true} link={path}>{t(`${title}.${id}.sicnes`)}</Button>
-                </div>
+                <Button key={id} className={"disases-button"} linkActive={true} link={path}>{t(`${title}.${id}.sicnes`)}</Button>              
             ))}</div>
             <Button className={"contraindications"} linkActive={true} link={'/contraindications'}>{t('Contraindications.contraindications-Button')}</Button>
         </div>

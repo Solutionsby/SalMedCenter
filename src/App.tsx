@@ -32,9 +32,11 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import translationEN from "./locales/en/translation.json";
 import translationPL from "./locales/pl/translation.json";
+import disasesTranslationPL from "./locales/pl/disasesTranslation.json"
 import ScrollToTopEffect from "./assets/ScrollToTop";
 import "./App.css";
 import { Indications } from "./components/treatment/indicationsForTreatment/IndicationsForTreatment";
+import { DisasesPage } from "./components/treatment/indicationsForTreatment/disasesPages/DisasesPage";
 
 const currentUrl = document.location.search;
 const urlParams = new URLSearchParams(currentUrl);
@@ -44,7 +46,7 @@ const defaultLanguage = "pl";
 i18n.use(initReactI18next).init({
   resources: {
     en: { translation: translationEN },
-    pl: { translation: translationPL },
+    pl: { translation: translationPL,disasesTranslation:disasesTranslationPL },
   },
   lng: languageFromUrl || defaultLanguage,
   fallbackLng: "en",
@@ -147,9 +149,35 @@ function App() {
               />
             }
           />
+          <Route 
+          path="neoplasm" element={<DisasesPage id={0}/>} />
+          <Route 
+          path="degenerative" element={<DisasesPage id={1}/>} />
+          <Route 
+          path="Neurodegenerative" element={<DisasesPage id={2}/>} />
+          <Route 
+          path="SM" element={<DisasesPage id={3}/>} />
+          <Route 
+          path="Epilepsy" element={<DisasesPage id={4}/>} />
+          <Route 
+          path="Glaucoma" element={<DisasesPage id={5}/>} />
+          <Route 
+          path="Endometriosis" element={<DisasesPage id={6}/>} />
+          <Route 
+          path="Depression" element={<DisasesPage id={7}/>} />
+          <Route 
+          path="Insomnia" element={<DisasesPage id={8}/>} />
+          <Route 
+          path="PTSD" element={<DisasesPage id={9}/>} />
+          <Route 
+          path="Dementia" element={<DisasesPage id={10}/>} />
+          <Route 
+          path="IBS" element={<DisasesPage id={11}/>} />
+
+
           <Route path="indications" element={<Indications />} />
 
-          
+
           <Route path="*" element={<NotFound />} />
         </Routes>
         <PrivacyPolicy
