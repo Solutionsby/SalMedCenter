@@ -17,14 +17,18 @@ export const DisasesPage:React.FC<DisasesProps> =({id})=>{
     console.log(filteredList)
     return (
         <div className="disases-page-wrapper">
-            <Header image={"/img/headers/Treatment/disases/disases.jpg"}/>
+            <Header image={"/img/headers/Treatment/disases/disases.jpg"} className={"disases-header-wrapper"}>
+                <div className="disases-header"><h2>{t(`diseases.${id}.sicnes`)}</h2></div></Header>
             <div className="main-text">
                 {/* @ts-ignore */}
                 <p>{t(disases[id].mainText)}</p>
             </div>
-            <div></div>
+            <div className='line'></div>
              {/* @ts-ignore */}
-            <div className="links">{disases[id].links.map(({title,herf})=>(
+            <div className="links">
+                <h2>{t("SourceMaterials")}</h2>
+                 {/* @ts-ignore */}
+                {disases[id].links.map(({title,herf})=>(
                 <a href={herf}>{title}</a>
             ))}</div>
              <div className="diseases-list">{filteredList.map(({id,title,path})=>(
