@@ -37,6 +37,7 @@ import ScrollToTopEffect from "./assets/ScrollToTop";
 import "./App.css";
 import { Indications } from "./components/treatment/indicationsForTreatment/IndicationsForTreatment";
 import { DisasesPage } from "./components/treatment/indicationsForTreatment/disasesPages/DisasesPage";
+import { Contraindications } from "./components/treatment/contraindications/Contraindications";
 
 const currentUrl = document.location.search;
 const urlParams = new URLSearchParams(currentUrl);
@@ -174,8 +175,8 @@ function App() {
           <Route 
           path="IBS" element={<DisasesPage id={11}/>} />
 
-
           <Route path="indications" element={<Indications />} />
+          <Route path="contraindications" element={<Contraindications />} />
 
 
           <Route path="*" element={<NotFound />} />

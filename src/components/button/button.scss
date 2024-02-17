@@ -37,3 +37,28 @@
     border-radius: $border;
     font-size: 2.1vh;
 }
+.contradications-button{
+    display: flex;
+    flex-grow: 2;
+    justify-content: center;
+    align-content: center;
+    width: 45%;
+    height: 10vh;
+    border-radius: $border;
+    border:1px solid black;
+    a{color:$primary-color;}
+}
+.indications{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    border: 1px solid black;
+    border-radius: $border;
+    margin: 1vh 20%;
+    a{
+        color: $primary-color;
+    }
+
+}

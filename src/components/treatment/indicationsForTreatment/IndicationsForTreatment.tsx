@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { useTranslation } from "react-i18next";
 import { useEffect, useState } from 'react';
-import './indicationsForTreatment.scss';
 import { Button } from '../../button/Button';
+import './indicationsForTreatment.scss';
 
 
 
