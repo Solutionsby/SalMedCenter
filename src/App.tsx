@@ -1,6 +1,4 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import { initReactI18next } from "react-i18next";
-import i18n from "i18next";
 import { MainPage } from "./components/mainPage/MainPage";
 import { MainNavigation } from "./components/navigation/MainNavigation";
 import { PrivacyPolicy } from "./components/policy/PrivacyPolicy";
@@ -13,62 +11,15 @@ import { ServicesPages } from "./components/servicesPage/servicesPages/ServicesP
 import {NotFound} from "./components/notFound/NotFound"
 import { priceComponent } from "./components/db/price.json";
 import { serviceContent } from "./components/db/services.json";
-import { library } from "@fortawesome/fontawesome-svg-core";
 import { useEffect, useState } from "react";
 import { initGA, logPageView } from "./components/googleAnalitik/gtag";
-import {
-  faUserMd,
-  faBriefcaseMedical,
-  faLaptopMedical,
-  faStethoscope,
-  faMobileAlt,
-  faEnvelope,
-  faMapMarkerAlt,
-  faClinicMedical,
-  faCannabis,
-  faFileMedical,
-  faHandHoldingMedical,
-  faTriangleExclamation
-} from "@fortawesome/free-solid-svg-icons";
-import translationEN from "./locales/en/translation.json";
-import translationPL from "./locales/pl/translation.json";
-import disasesTranslationPL from "./locales/pl/disasesTranslation.json"
+import { changeLanguage,defaultLanguageFromLocalStorage,languageFromUrl } from './i18nextSetup/i18nextSetup'
 import ScrollToTopEffect from "./assets/ScrollToTop";
 import "./App.css";
 import { Indications } from "./components/treatment/indicationsForTreatment/IndicationsForTreatment";
 import { DisasesPage } from "./components/treatment/indicationsForTreatment/disasesPages/DisasesPage";
 import { Contraindications } from "./components/treatment/contraindications/Contraindications";
-
-const currentUrl = document.location.search;
-const urlParams = new URLSearchParams(currentUrl);
-const languageFromUrl = urlParams.get("lang");
-const defaultLanguage = "pl";
-
-i18n.use(initReactI18next).init({
-  resources: {
-    en: { translation: translationEN },
-    pl: { translation: translationPL,disasesTranslation:disasesTranslationPL },
-  },
-  lng: languageFromUrl || defaultLanguage,
-  fallbackLng: "en",
-  interpolation: {
-    escapeValue: false,
-  },
-});
-library.add(
-  faUserMd,
-  faBriefcaseMedical,
-  faLaptopMedical,
-  faStethoscope,
-  faMobileAlt,
-  faEnvelope,
-  faMapMarkerAlt,
-  faClinicMedical,
-  faCannabis,
-  faFileMedical,
-  faHandHoldingMedical,
-  faTriangleExclamation
-);
+import "./fontAwsome/ImportsFontAwsome"
 
 function App() {
   const [privacAccepted, setPrivacyAccepted] = useState<boolean | null>(null);
@@ -103,9 +54,9 @@ function App() {
     <Router>
       <div className="app-wrapper">
         <MainNavigation
-          changeLanguage={i18n.changeLanguage}
+          changeLanguage={changeLanguage}
           languageFromUrl={languageFromUrl}
-          defaultLanguage={defaultLanguage}
+          defaultLanguage={defaultLanguageFromLocalStorage}
         />
         <ScrollToTopEffect />
         <Routes>

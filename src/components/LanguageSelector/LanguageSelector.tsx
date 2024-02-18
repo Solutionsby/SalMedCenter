@@ -12,7 +12,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
   curentLanguage,
 }) => {
   const loaclLanguageSet = (language: string) => {
-    localStorage.setItem("Language", language);
+    localStorage.setItem("language", language);
   };
   const handleLanguageChange = (language: string) => {
     changeLanguage(language);
