@@ -11,7 +11,10 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
+    h1{
+      color:$secendary-color;
+    }
   }
   .services-pages-descripon-wrapper {
     display: flex;
@@ -27,25 +30,26 @@
     }
     .services-price-list {
       display: flex;
-      width: 100%;
-      flex-direction: column;
+      width: 90%;
+      gap:10px;
       align-items: center;
-      .price {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 95%;
-        h1,
-        h2 {
-          flex-grow: 1;
-        }
-
         .price-line {
           background-color: $primary-color;
           flex-grow: 2;
           height: 1px;
         }
       }
+    
+  }
+  .first-time-visit-wrapper{
+    display: flex;
+    flex-direction: column;
+
+    p{
+      text-align: justify;
+      margin: 1vh 10%;
+      width: 80%;
+      color: black;
     }
   }
   .services-button {

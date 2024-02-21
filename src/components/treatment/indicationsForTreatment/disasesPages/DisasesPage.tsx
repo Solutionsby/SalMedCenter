@@ -14,7 +14,7 @@ interface DisasesProps{
 export const DisasesPage:React.FC<DisasesProps> =({id})=>{
     const { t } = useTranslation("disasesTranslation");
     const filteredList = indications.diseases.filter((item, index)=> index !== id)
-    console.log(filteredList)
+
     return (
         <div className="disases-page-wrapper">
             <Header image={"/img/headers/Treatment/disases/disases.jpg"} className={"disases-header-wrapper"}>

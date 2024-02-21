@@ -17,14 +17,18 @@
     align-items: center;
     border-radius: $border;
     height: 40%;
-    width: 40%;
+    min-width: 50%;
     background-color: rgba($primary-color, 0.6);
     color: $secendary-color;
     z-index: 2;
+    h2{
+        padding: 10px;
+    }
 
 
 }
 .main-text{
+    color:black;
     text-align: justify;
     width: 90%;
     margin: 0 5%;

@@ -1,11 +1,11 @@
 import "./priceList.scss";
 import { useTranslation } from "react-i18next";
-import { priceComponent } from "../db/price.json";
+import {serviceContent} from "../db/services.json"
 import { Header } from "../header/Header";
 import { Helmet } from "react-helmet";
 
 export const PriceList: React.FC = () => {
-  const { t } = useTranslation("translation");
+  const { t } = useTranslation("serviceSection");
   return (
     <div>
       <Helmet>
@@ -112,30 +112,17 @@ export const PriceList: React.FC = () => {
       <div className="price-list-wrapper">
         <Header image={"/img/slides/Slider2.jpg"} />
         <div className="price-list-pediatric-indection price-list">
-          {priceComponent.map(
+          {serviceContent.map(
             ({
               id,
-              headerName,
-              headerContent,
-              priceContentWeek,
-              priceWeek,
-              priceContentWeekend,
-              priceWeekend,
+              visitHeader,
+              price
             }) => (
               <div className="price-component-wrapper" key={id}>
-                <h4>
-                  {t(headerName)}
-                  {t(headerContent)}
-                </h4>
                 <div className="price-list-content">
-                  <p>{t(priceContentWeek)}</p>
+                  <p>{t(visitHeader)}</p>
                   <div className="line"></div>
-                  <p>{priceWeek}</p>
-                </div>
-                <div className="price-list-content">
-                  <p>{t(priceContentWeekend)}</p>
-                  <div className="line"></div>
-                  <p>{priceWeekend}</p>
+                  <p>{price} zł</p>
                 </div>
               </div>
             )

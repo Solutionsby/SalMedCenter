@@ -11,6 +11,7 @@ interface NavigationProps {
   defaultLanguage: string;
 }
 
+
 export const MainNavigation: React.FC<NavigationProps> = ({
   changeLanguage,
   languageFromUrl,
@@ -20,6 +21,8 @@ export const MainNavigation: React.FC<NavigationProps> = ({
   const [curentLanguage, setCurentLanguage] = useState(
     languageFromUrl || defaultLanguage
   );
+ 
+
   const menuSwitch = (
     setter: React.Dispatch<React.SetStateAction<boolean>>,
     toggle: boolean,

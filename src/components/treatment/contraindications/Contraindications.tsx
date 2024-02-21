@@ -6,7 +6,7 @@ import { Button } from '../../button/Button';
 
 
 export const Contraindications =()=>{
-    const { t } = useTranslation("translation");
+    const { t } = useTranslation("contraindactions");
     return(
        <div className="contraindications-wrapper">
          <Header image={"/img/headers/Treatment/Indications/Indications.jpg"} />

@@ -1,4 +1,4 @@
-import "./abouteMe.scss";
+import "./aboutMe.scss"
 import { useTranslation } from "react-i18next";
 
 export const AboutMe = () => {

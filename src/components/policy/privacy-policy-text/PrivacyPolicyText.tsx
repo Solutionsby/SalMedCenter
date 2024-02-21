@@ -2,7 +2,7 @@ import "./privacyPolicyText.scss";
 import { useTranslation } from "react-i18next";
 
 export const PrivacyPolicyText = () => {
-  const { t } = useTranslation("translation");
+  const { t } = useTranslation("privatyPolicy");
   return (
     <div className="privacy-policy-text-wrapper">
       <div className="privacy-policy-text-entry">

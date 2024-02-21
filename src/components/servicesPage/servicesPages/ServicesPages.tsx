@@ -1,28 +1,27 @@
 import { useTranslation } from "react-i18next";
 import { Header } from "../../header/Header";
-import { ButtonContact } from "../../buttonContact/ButtonContact";
-import contact from "../../db/contact.json";
+import {services} from '../../db/services.json'
+import { DownloadForm } from "../../downloadForm/DownloadForm";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { IconProp } from "@fortawesome/fontawesome-svg-core";
+import { Link } from "react-router-dom";
 import "./servicesPages.scss";
 
 interface priceObject {
-  price: {
-    headerName: string;
-    headerContent: string;
-    priceContentWeek: string;
-    priceContentWeekend: string;
-    priceWeek: string;
-    priceWeekend: string;
-  };
   content: {
+    id:number;
+    price:number;
     visitHeader: string;
     headerImg: string;
-    visitDescripton: string;
   };
+  isFirstService?:boolean
+  isEanglish?:string
 }
 
-export const ServicesPages: React.FC<priceObject> = ({ price, content }) => {
-  const { t } = useTranslation("translation");
-
+export const ServicesPages: React.FC<priceObject> = ({ content, isFirstService, isEanglish }) => {
+  const { t } = useTranslation("serviceSection");
+  const filtredList = services.filter((item, index)=> index !== content.id)
+  console.log(isEanglish)
   return (
     <div className="services-pages-wrapper">
       <Header image={content.headerImg}>
@@ -30,24 +29,36 @@ export const ServicesPages: React.FC<priceObject> = ({ price, content }) => {
           <h1>{t(content.visitHeader)}</h1>
         </div>
       </Header>
+
       <div className="services-pages-descripon-wrapper">
-        <div className="services-descripton">{t(content.visitDescripton)}</div>
+        <div className="services-descripton">{t(`servicesContent.${content.id}.content`)}</div>
         <div className="services-price-list">
-          <div className="price">
-            <h4>{t(price.priceContentWeek)}</h4>
-            <div className="price-line"></div>
-            <h3>{price.priceWeek}</h3>
-          </div>
-          <div className="price">
-            <h4>{t(price.priceContentWeekend)}</h4>
-            <div className="price-line"></div>
-            <h3>{price.priceWeekend}</h3>
-          </div>
+        <div className="price-line"></div>
+            <h4>{t(`servicesContent.${content.id}.priceText`)}</h4>
+            <h3>{content.price} zł</h3>
+          <div className="price-line"></div>
+
         </div>
-        <ButtonContact classname={"services-button"} telephon={contact.telephone}>
-          {t("buttonText.reservation")}
-        </ButtonContact>
+        {(isFirstService && isEanglish != "en")&& <div className="first-time-visit-wrapper">
+          <p className="description">{t("servicesContent.0.descripton")}</p>
+          <DownloadForm />        
+          </div>}
+    <div className="service-component service">{filtredList.map(({id,fontAwsomeIcon,descriptionKey,linkPath})=>(
+      <div key={id} className="services-component-wrapper service-in-service">
+      <Link to={linkPath} className="services-links">
+        <div className="service-icon">
+          <FontAwesomeIcon icon={fontAwsomeIcon as IconProp} />
+        </div>
+        <div className="service-texts">
+          <h2 className="service-description">{t(descriptionKey)}</h2>
+          <p>{t("services.more")}</p>
+        </div>
+      </Link>
+    </div>
+
+    ))}</div>
       </div>
+
     </div>
   );
 };

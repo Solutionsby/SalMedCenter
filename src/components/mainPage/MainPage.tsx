@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom";
-import { AboutMe } from "../aboutMe/AbouteMe";
+import { AboutMe } from "../aboutMe/AboutMe";
 import { ServicePage } from "../servicesPage/ServicesPage";
 import { Slider } from "../slider/Slider";
 import { Helmet } from "react-helmet";
