@@ -1,7 +1,9 @@
 import "./menuNavigation.scss";
 import { Link } from "react-router-dom";
 import {navigation} from "../../db/navigation.json"
+import {button} from "../../db/navigation.json"
 import { useTranslation } from "react-i18next";
+import { Button } from "../../button/Button";
 
 export const MenuNavigation: React.FC<{
   isActive: boolean;
@@ -19,7 +21,9 @@ export const MenuNavigation: React.FC<{
             </Link>
           </li>
         ))}
+        <Button className="button-menu-contact" linkActive={false} link={button.number}>{t('navigation.button')}</Button>
       </ul>
     </div>
   );
 };
+
