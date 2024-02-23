@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { Link } from "react-router-dom";
 import "./servicesPages.scss";
+import { useLanguage } from "../../../context/Context";
 
 interface priceObject {
   content: {
@@ -21,7 +22,8 @@ interface priceObject {
 export const ServicesPages: React.FC<priceObject> = ({ content, isFirstService, isEanglish }) => {
   const { t } = useTranslation("serviceSection");
   const filtredList = services.filter((item, index)=> index !== content.id)
-  console.log(isEanglish)
+  const { currentLanguage} = useLanguage();
+  console.log(currentLanguage)
   return (
     <div className="services-pages-wrapper">
       <Header image={content.headerImg}>
@@ -39,7 +41,7 @@ export const ServicesPages: React.FC<priceObject> = ({ content, isFirstService, 
           <div className="price-line"></div>
 
         </div>
-        {(isFirstService && isEanglish != "en")&& <div className="first-time-visit-wrapper">
+        {(isFirstService && currentLanguage != "en")&& <div className="first-time-visit-wrapper">
           <p className="description">{t("servicesContent.0.descripton")}</p>
           <DownloadForm />        
           </div>}

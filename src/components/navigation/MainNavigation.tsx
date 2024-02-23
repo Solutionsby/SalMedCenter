@@ -5,23 +5,17 @@ import { MenuNavigation } from "./ManuNavigation/MenuNavigation";
 import { MenuNavigationLandscape } from "./ManuNavigation/MenuNavigationLandscape/MenuNavigationLandscape";
 import { LanguageSelector } from "../LanguageSelector/LanguageSelector";
 
+
 interface NavigationProps {
   changeLanguage: (language: string) => void;
-  languageFromUrl: string | null;
-  defaultLanguage: string;
 }
 
 
 export const MainNavigation: React.FC<NavigationProps> = ({
   changeLanguage,
-  languageFromUrl,
-  defaultLanguage,
 }) => {
   const [active, setActive] = useState(false);
-  const [curentLanguage, setCurentLanguage] = useState(
-    languageFromUrl || defaultLanguage
-  );
- 
+
 
   const menuSwitch = (
     setter: React.Dispatch<React.SetStateAction<boolean>>,
@@ -42,11 +36,7 @@ export const MainNavigation: React.FC<NavigationProps> = ({
         </Link>
       </div>
       <MenuNavigationLandscape />
-      <LanguageSelector
-        changeLanguage={changeLanguage}
-        curentLanguage={curentLanguage}
-        setCurentLanguage={setCurentLanguage}
-      />
+      <LanguageSelector />
       <div
         className={active ? "burger-menu-wrapper open" : "burger-menu-wrapper"}
         onClick={() => menuSwitch(setActive, active, false)}

@@ -9,7 +9,6 @@ import { PrivacyPolicyText } from "./components/policy/privacy-policy-text/Priva
 import { ServicesPages } from "./components/servicesPage/servicesPages/ServicesPages";
 import {NotFound} from "./components/notFound/NotFound"
 import { serviceContent } from "./components/db/services.json";
-
 import { useEffect, useState } from "react";
 import { initGA, logPageView } from "./components/googleAnalitik/gtag";
 import { changeLanguage,defaultLanguageFromLocalStorage,languageFromUrl } from './i18nextSetup/i18nextSetup'
@@ -54,8 +53,6 @@ function App() {
       <div className="app-wrapper">
         <MainNavigation
           changeLanguage={changeLanguage}
-          languageFromUrl={languageFromUrl}
-          defaultLanguage={defaultLanguageFromLocalStorage}
         />
         <ScrollToTopEffect />
         <Routes>

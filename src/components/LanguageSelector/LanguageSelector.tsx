@@ -1,22 +1,21 @@
 import "./languageSelector.scss";
+import {changeLanguage} from '../../i18nextSetup/i18nextSetup'
+import { useLanguage } from "../../context/Context";
 
-interface LanguageSelectorProps {
-  changeLanguage: (language: string) => void;
-  setCurentLanguage: (language: string) => void;
-  curentLanguage: string;
-}
 
-export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
-  changeLanguage,
-  setCurentLanguage,
-  curentLanguage,
+
+export const LanguageSelector: React.FC= ({
+
+
 }) => {
+  const { currentLanguage, setCurrentLanguage } = useLanguage();
+
   const loaclLanguageSet = (language: string) => {
     localStorage.setItem("language", language);
   };
   const handleLanguageChange = (language: string) => {
     changeLanguage(language);
-    setCurentLanguage(language);
+    setCurrentLanguage(language);
     loaclLanguageSet(language);
   };
   return (
@@ -27,7 +26,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           onClick={() => handleLanguageChange("pl")}
           style={{
             backgroundColor:
-              curentLanguage === "pl" ? "transparent" : "rgba(0,0,0,0.7)",
+            currentLanguage === "pl" ? "transparent" : "rgba(0,0,0,0.7)",
           }}
         ></div>
       </div>
@@ -38,7 +37,7 @@ export const LanguageSelector: React.FC<LanguageSelectorProps> = ({
           onClick={() => handleLanguageChange("en")}
           style={{
             backgroundColor:
-              curentLanguage === "en" ? "transparent" : "rgba(0,0,0,0.7)",
+            currentLanguage === "en" ? "transparent" : "rgba(0,0,0,0.7)",
           }}
         ></div>
       </div>
