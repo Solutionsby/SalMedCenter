@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import "./servicePage.scss";
 
 export const ServicePage = () => {
-  const { t } = useTranslation("translation");
+  const { t } = useTranslation("serviceSection");
   return (
     <div className="service-page-wrapper">
       <div className="service-component">

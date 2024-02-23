@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 
 export const AboutMarijuana = () =>{
-    const { t } = useTranslation("translation");
+    const { t } = useTranslation("aboutSection");
     return(
         <div className="about-marijuana-wrapper">
             <h1>{t("aboutMarijuana.title")}</h1>

@@ -11,7 +11,7 @@ import './indicationsForTreatment.scss';
 
 
 export const Indications =()=>{
-    const { t } = useTranslation("translation");
+    const { t } = useTranslation("disasesTranslation");
     const [popupDisplayed, setPopupDisplayed] =useState(false);
 
 
@@ -45,11 +45,11 @@ export const Indications =()=>{
 
             </div>
             </div>
-            <div className="indications-header"><h2>Lista Schorzeń, w których terapia Marihuaną może przyniesć korzyści</h2></div>
+            <div className="indications-header"><h2>{t("headerTretment")}</h2></div>
             <div className="diseases-list">{diseases.map(({id,title,path})=>(
                 <Button key={id} className={"disases-button"} linkActive={true} link={path}>{t(`${title}.${id}.sicnes`)}</Button>              
             ))}</div>
-            <Button className={"contraindications"} linkActive={true} link={'/contraindications'}>{t('Contraindications.contraindications-Button')}</Button>
+            <Button className={"contraindications"} linkActive={true} link={'/contraindications'}>{t('contraindications-Button')}</Button>
         </div>
     )
 }

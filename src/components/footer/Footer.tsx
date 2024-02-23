@@ -9,15 +9,15 @@ import logo from "/img/logo/Salmed_logo_poziom_biale.svg";
 import "./footer.scss";
 
 export const Footer = () => {
-  const { t } = useTranslation("translation");
+  const { t } = useTranslation("button");
   return (
     <div className="footer-wrapper">
       <Link className="privacy-policy" to="privacy-policy">
-        {t("privacyPolicy.policy")}
+        {t("ButtonText.privacyPolicy")}
       </Link>
       <div className="footer-contact">
         <ButtonContact classname={"footer-button"} telephon={contact.telephone}>
-          {t("buttonText.reservation")}
+          {t("ButtonText.reservationButton")}
         </ButtonContact>
         <a href={`tel:+48${contact.telephone}`}>
           <div className="footer-contat-links">

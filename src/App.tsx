@@ -3,23 +3,21 @@ import { MainPage } from "./components/mainPage/MainPage";
 import { MainNavigation } from "./components/navigation/MainNavigation";
 import { PrivacyPolicy } from "./components/policy/PrivacyPolicy";
 import { Footer } from "./components/footer/Footer";
-import { AboutMe } from "./components/aboutMe/AbouteMe";
 import { PriceList } from "./components/ priceList/PriceList";
 import { Contact } from "./components/ contact/Contact";
 import { PrivacyPolicyText } from "./components/policy/privacy-policy-text/PrivacyPolicyText";
 import { ServicesPages } from "./components/servicesPage/servicesPages/ServicesPages";
 import {NotFound} from "./components/notFound/NotFound"
-import { priceComponent } from "./components/db/price.json";
 import { serviceContent } from "./components/db/services.json";
 import { useEffect, useState } from "react";
 import { initGA, logPageView } from "./components/googleAnalitik/gtag";
 import { changeLanguage,defaultLanguageFromLocalStorage,languageFromUrl } from './i18nextSetup/i18nextSetup'
 import ScrollToTopEffect from "./assets/ScrollToTop";
-import "./App.css";
 import { Indications } from "./components/treatment/indicationsForTreatment/IndicationsForTreatment";
 import { DisasesPage } from "./components/treatment/indicationsForTreatment/disasesPages/DisasesPage";
 import { Contraindications } from "./components/treatment/contraindications/Contraindications";
 import "./fontAwsome/ImportsFontAwsome"
+import "./App.css";
 
 function App() {
   const [privacAccepted, setPrivacyAccepted] = useState<boolean | null>(null);
@@ -55,22 +53,21 @@ function App() {
       <div className="app-wrapper">
         <MainNavigation
           changeLanguage={changeLanguage}
-          languageFromUrl={languageFromUrl}
-          defaultLanguage={defaultLanguageFromLocalStorage}
         />
         <ScrollToTopEffect />
         <Routes>
           <Route path="/" element={<MainPage />} />
-          <Route path="about" element={<AboutMe />} />
           <Route path="priceList" element={<PriceList />} />
           <Route path="contact" element={<Contact />} />
           <Route path="privacy-policy" element={<PrivacyPolicyText />} />
+          
           <Route
             path="pedriatic-indection"
             element={
               <ServicesPages
-                price={priceComponent[0]}
                 content={serviceContent[0]}
+                isFirstService={true}
+                isEanglish={defaultLanguageFromLocalStorage} 
               />
             }
           />
@@ -78,7 +75,6 @@ function App() {
             path="pedriatic-healthy"
             element={
               <ServicesPages
-                price={priceComponent[1]}
                 content={serviceContent[1]}
               />
             }
@@ -87,7 +83,6 @@ function App() {
             path="internist-indection"
             element={
               <ServicesPages
-                price={priceComponent[2]}
                 content={serviceContent[2]}
               />
             }
@@ -96,8 +91,15 @@ function App() {
             path="internist-healthy"
             element={
               <ServicesPages
-                price={priceComponent[3]}
                 content={serviceContent[3]}
+              />
+            }
+          />
+          <Route
+            path="internist"
+            element={
+              <ServicesPages
+                content={serviceContent[4]}
               />
             }
           />
