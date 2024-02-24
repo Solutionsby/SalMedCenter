@@ -6,14 +6,8 @@ import { MenuNavigationLandscape } from "./ManuNavigation/MenuNavigationLandscap
 import { LanguageSelector } from "../LanguageSelector/LanguageSelector";
 
 
-interface NavigationProps {
-  changeLanguage: (language: string) => void;
-}
 
-
-export const MainNavigation: React.FC<NavigationProps> = ({
-  changeLanguage,
-}) => {
+export const MainNavigation: React.FC= () => {
   const [active, setActive] = useState(false);
 
 

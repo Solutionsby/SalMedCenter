@@ -16,10 +16,9 @@ interface priceObject {
     headerImg: string;
   };
   isFirstService?:boolean
-  isEanglish?:string
 }
 
-export const ServicesPages: React.FC<priceObject> = ({ content, isFirstService, isEanglish }) => {
+export const ServicesPages: React.FC<priceObject> = ({ content, isFirstService,}) => {
   const { t } = useTranslation("serviceSection");
   const filtredList = services.filter((item, index)=> index !== content.id)
   const { currentLanguage} = useLanguage();

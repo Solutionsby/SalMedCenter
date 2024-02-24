@@ -1,52 +1,25 @@
 @import "../../../../assets/constant.scss";
 .menu-navigation-landscep-wrapper {
   display: flex;
-  width: 60%;
-  height: 100%;
   align-items: center;
+  width: 65%;
+  height: 100%;
   .menu-ul-wrapper-landscape {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     width: 100%;
+    li{
+      list-style: none;
+    }
     a {
       font-family: $font;
       color: black;
-      font-size: 1.2rem;
+      font-size: 1vw;
       font-weight: 400;
       text-transform: uppercase;
     }
   }
 }
-
-@media screen and (max-width: 768px) and (orientation: landscape) {
-  .menu-navigation-landscep-wrapper {
-    .menu-ul-wrapper-landscape {
-      a {
-        font-size: 0.8rem;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  .menu-navigation-landscep-wrapper {
-    .menu-ul-wrapper-landscape {
-      a {
-        font-size: 1.2rem;
-      }
-    }
-  }
-}
-@media screen and (min-width: 1024px) and (orientation: landscape) {
-  .menu-navigation-landscep-wrapper {
-    .menu-ul-wrapper-landscape {
-      a {
-        font-size: 1.6rem;
-      }
-    }
-  }
-}
-
 @media screen and (orientation: portrait) {
   .menu-navigation-landscep-wrapper {
     display: none;
