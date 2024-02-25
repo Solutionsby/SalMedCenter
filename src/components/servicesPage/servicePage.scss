@@ -52,7 +52,7 @@
         .service-texts {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-around;
           height: 40%;
           color: white;
           font-family: $font;
@@ -62,9 +62,6 @@
           }
         }
       }
-    }
-    .service{
-
     }
   }
   .service{
@@ -85,16 +82,14 @@
       justify-content: space-around;
       .services-component-wrapper {
         height: 50vh;
-        width: 45%;
-        .services-links {
-          height: 100%;
-          width: 100%;
+        width: 60%;
+
           .service-texts {
             p {
               font-size: 14px;
             }
           }
-        }
+        
       }
     }
   }
@@ -126,7 +121,7 @@
     }
   }
 }
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 1025px) and (orientation: landscape) {
   .service-page-wrapper {
     margin-top: $nav-height;
     .service-component {
@@ -134,16 +129,16 @@
       flex-wrap: wrap;
       justify-content: space-around;
       .services-component-wrapper {
-        height: 28vh;
-        width: 30%;
+        height: 30vh;
+        width: 40%;
         .services-links {
           .service-icon {
             height: 40%;
-            font-size: 70px;
+            font-size: 5vw;
           }
           .service-texts {
             height: 60%;
-            font-size: 24px;
+            font-size: 1.5rem;
             p {
               font-size: 19px;
             }

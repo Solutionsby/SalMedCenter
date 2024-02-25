@@ -41,3 +41,16 @@
     }
   }
 }
+@media screen and (max-width: 768px) and (orientation: landscape){
+  .button-wrapper-contact {
+
+    button.button-call {
+      font-size: 10px;
+      a {
+        svg {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+}
