@@ -16,17 +16,16 @@ interface priceObject {
     headerImg: string;
   };
   isFirstService?:boolean
-  isEanglish?:string
 }
 
-export const ServicesPages: React.FC<priceObject> = ({ content, isFirstService, isEanglish }) => {
+export const ServicesPages: React.FC<priceObject> = ({ content, isFirstService,}) => {
   const { t } = useTranslation("serviceSection");
   const filtredList = services.filter((item, index)=> index !== content.id)
   const { currentLanguage} = useLanguage();
   console.log(currentLanguage)
   return (
     <div className="services-pages-wrapper">
-      <Header image={content.headerImg}>
+      <Header image={content.headerImg} className="header-service-page">
         <div className="header-blend">
           <h1>{t(content.visitHeader)}</h1>
         </div>

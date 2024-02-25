@@ -66,33 +66,25 @@
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .services-pages-wrapper {
     margin-top: $nav-height-landscape;
-    flex-direction: row;
-    .services-pages-descripon-wrapper {
-      width: 45%;
-    }
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
   .services-pages-wrapper {
     margin-top: $nav-height;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     .services-pages-descripon-wrapper {
-      width: 35%;
       gap: 10vh;
     }
   }
 }
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 1025px) and (orientation: landscape) {
   .services-pages-wrapper {
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 80vh;
     margin-top: $nav-height;
     .services-pages-descripon-wrapper {
-      width: 35%;
+      width: 80%;
       gap: 10vh;
       .services-descripton {
         font-size: 19px;

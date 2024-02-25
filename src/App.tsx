@@ -11,7 +11,6 @@ import {NotFound} from "./components/notFound/NotFound"
 import { serviceContent } from "./components/db/services.json";
 import { useEffect, useState } from "react";
 import { initGA, logPageView } from "./components/googleAnalitik/gtag";
-import { changeLanguage,defaultLanguageFromLocalStorage,languageFromUrl } from './i18nextSetup/i18nextSetup'
 import ScrollToTopEffect from "./assets/ScrollToTop";
 import { Indications } from "./components/treatment/indicationsForTreatment/IndicationsForTreatment";
 import { DisasesPage } from "./components/treatment/indicationsForTreatment/disasesPages/DisasesPage";
@@ -51,9 +50,7 @@ function App() {
   return (
     <Router>
       <div className="app-wrapper">
-        <MainNavigation
-          changeLanguage={changeLanguage}
-        />
+        <MainNavigation/>
         <ScrollToTopEffect />
         <Routes>
           <Route path="/" element={<MainPage />} />
@@ -67,7 +64,6 @@ function App() {
               <ServicesPages
                 content={serviceContent[0]}
                 isFirstService={true}
-                isEanglish={defaultLanguageFromLocalStorage} 
               />
             }
           />

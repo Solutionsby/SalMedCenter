@@ -28,7 +28,7 @@ export const Indications =()=>{
     }
     return (
         <div className="indications-wrapper">
-            <Header image={"/img/headers/Treatment/Indications/Indications.jpg"} />
+            <Header image={"/img/headers/Treatment/Indications/Indications.jpg"} className="header-incications" />
             <div className= {`warning-wrapper ${popupDisplayed ? "active": ""}`}>
                 <div className="warning">
                  <div className={`close-pop-up ${popupDisplayed? "visible": ""}`} onClick={handlepopUpClose}>
