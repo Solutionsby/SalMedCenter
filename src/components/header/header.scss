@@ -18,15 +18,36 @@
     width: 50%;
     height: 80vh;
   }
+  .header-wrapper.header-incications, .header-wrapper.header-contraindications{
+    width: 100%;
+    background-size: contain;
+  }
+  .header-wrapper.disases-header-wrapper, .header-wrapper.header-service-page {
+    width: 100%;
+  }
 }
-@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 769px) and (max-width: 1024px) and (orientation: landscape) {
   .header-wrapper {
     width: 50%;
     height: 80vh;
   }
+  .header-wrapper.header-incications,.header-wrapper.header-contraindications {
+    width: 100%;
+    background-size: contain;
+  }
+  .header-wrapper.disases-header-wrapper,.header-wrapper.header-service-page {
+    width: 100%;
+  }
 }
-@media screen and (min-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 1025px) and (orientation: landscape) {
   .header-wrapper {
     width: 50%;
+  }
+  .header-wrapper.header-incications,.header-wrapper.header-contraindications {
+    width: 100%;
+    background-size: contain;
+  }
+  .header-wrapper.disases-header-wrapper,.header-wrapper.header-service-page {
+    width: 100%;
   }
 }

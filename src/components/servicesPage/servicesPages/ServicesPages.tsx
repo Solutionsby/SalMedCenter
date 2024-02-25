@@ -25,7 +25,7 @@ export const ServicesPages: React.FC<priceObject> = ({ content, isFirstService,}
   console.log(currentLanguage)
   return (
     <div className="services-pages-wrapper">
-      <Header image={content.headerImg}>
+      <Header image={content.headerImg} className="header-service-page">
         <div className="header-blend">
           <h1>{t(content.visitHeader)}</h1>
         </div>

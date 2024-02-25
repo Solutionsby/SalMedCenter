@@ -9,7 +9,7 @@ export const Contraindications =()=>{
     const { t } = useTranslation("contraindactions");
     return(
        <div className="contraindications-wrapper">
-         <Header image={"/img/headers/Treatment/Indications/Indications.jpg"} />
+         <Header image={"/img/headers/Treatment/Indications/Indications.jpg"} className={"header-contraindications"} />
          <h2>{t("Contraindications.contraindicationsMainText")}</h2>
          <div className="contraidications-button-wrapper">{contriandications.map(({id,title})=>(
             <Button key={id} className='contradications-button' >{t(`Contraindications.${title}.${id}.sicnes`)}</Button>
