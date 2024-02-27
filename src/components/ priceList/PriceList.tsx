@@ -18,7 +18,7 @@ export const PriceList: React.FC = () => {
           name="description"
           content={t("Helmet.metaDescryptionPriceList")}
         ></meta>
-        <link rel="canonical" href="https://gabinet.sal-med.pl" />
+        <link rel="canonical" href="https://centrum.sal-med.pl" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">
           {`
@@ -26,7 +26,7 @@ export const PriceList: React.FC = () => {
         "@context": "https://schema.org",
         "@type": "MedicalBusiness",
         "name": "Salmed Adam Salbert",
-        "description": "Gabinet lekarski Salmed Adam Salbert - pediatra i internista w Gdańsku",
+        "description": "Centrum Salmed w Gdańsku, specjalizujących się w terapii medycznej z użyciem marihuany leczniczej. Znajdź szczegóły naszych usług i cennik terapii. Zdobądź nowe spojrzenie na leczenie już dziś!",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Szczecińska 23/Gabinet 11",
@@ -35,7 +35,7 @@ export const PriceList: React.FC = () => {
             "addressCountry": "Polska"
         },
         "telephone": "+48-785-427-424",
-        "url": "http://www.gabinet.sal-med.pl",
+        "url": "http://centrum.sal-med.pl",
         "openingHours": [
             {
                 "@type": "OpeningHoursSpecification",
@@ -79,31 +79,31 @@ export const PriceList: React.FC = () => {
                 "closes": "closed"
             }
         ],
-        "medicalSpecialty": ["pediatra", "internista"],
+        "medicalSpecialty": ["Marihuana Lecznicza", "Leczenie alternatywne"],
         "founder": {
             "@type": "Person",
             "name": "Adam Salbert",
             "jobTitle": "Lekarz Medycyny",
-            "specialty": "Pediatra"
         },
         "medicalService": [
-            {
-                "@type": "MedicalProcedure",
-                "name": "Pediatria wizyta infekcyjna"
-            },
-            {
-                "@type": "MedicalProcedure",
-                "name": "Pediatria wizyta dzieci zdrowych"
-            },
-            {
-                "@type": "MedicalProcedure",
-                "name": "Internista wizyta infekcyjna"
-            },
-            {
-                "@type": "MedicalProcedure",
-                "name": "Internista wizyta bez objawów infekcji"
-            }
-        ]
+          {
+              "@type": "MedicalProcedure",
+              "name": "Wizyta pierwszorazowa"
+          },
+          {
+              "@type": "MedicalProcedure",
+              "name": "Wizyta recepturowa"
+          },
+          {
+              "@type": "MedicalProcedure",
+              "name": "Druga wizyta"
+          },
+          {
+              "@type": "MedicalProcedure",
+              "name": "Kolejna wizyta"
+          }
+      ]
+      
       }
     `}
         </script>
