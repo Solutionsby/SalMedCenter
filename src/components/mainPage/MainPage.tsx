@@ -29,7 +29,7 @@ export const MainPage: React.FC = () => {
         <title>{t("Helmet.mainPageTitle")}</title>
         <meta name="keywords" content={t("Helmet.metaKeywords")}></meta>
         <meta name="description" content={t("Helmet.metaDescryption")}></meta>
-        <link rel="canonical" href="https://gabinet.sal-med.pl" />
+        <link rel="canonical" href="https://centrum.sal-med.pl" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">
           {`
@@ -37,7 +37,7 @@ export const MainPage: React.FC = () => {
         "@context": "https://schema.org",
         "@type": "MedicalBusiness",
         "name": "Salmed Adam Salbert",
-        "description": "Gabinet lekarski Salmed Adam Salbert - pediatra i internista w Gdańsku",
+        "description": "Centrum Salmed w Gdańsku, specjalizujących się w terapii medycznej z użyciem marihuany leczniczej. Znajdź szczegóły naszych usług i cennik terapii. Zdobądź nowe spojrzenie na leczenie już dziś!",
         "address": {
             "@type": "PostalAddress",
             "streetAddress": "Szczecińska 23/Gabinet 11",
@@ -46,7 +46,7 @@ export const MainPage: React.FC = () => {
             "addressCountry": "Polska"
         },
         "telephone": "+48-785-427-424",
-        "url": "http://www.gabinet.sal-med.pl",
+        "url": "https://centrum.sal-med.pl"",
         "openingHours": [
             {
                 "@type": "OpeningHoursSpecification",
@@ -95,26 +95,26 @@ export const MainPage: React.FC = () => {
             "@type": "Person",
             "name": "Adam Salbert",
             "jobTitle": "Lekarz Medycyny",
-            "specialty": "Pediatra"
+            "specialty": "Leczenie Marihuana leczniczą"
         },
         "medicalService": [
-            {
-                "@type": "MedicalProcedure",
-                "name": "Pediatria wizyta infekcyjna"
-            },
-            {
-                "@type": "MedicalProcedure",
-                "name": "Pediatria wizyta dzieci zdrowych"
-            },
-            {
-                "@type": "MedicalProcedure",
-                "name": "Internista wizyta infekcyjna"
-            },
-            {
-                "@type": "MedicalProcedure",
-                "name": "Internista wizyta bez objawów infekcji"
-            }
-        ]
+          {
+              "@type": "MedicalProcedure",
+              "name": "Wizyta pierwszorazowa"
+          },
+          {
+              "@type": "MedicalProcedure",
+              "name": "Wizyta recepturowa"
+          },
+          {
+              "@type": "MedicalProcedure",
+              "name": "Druga wizyta"
+          },
+          {
+              "@type": "MedicalProcedure",
+              "name": "Kolejna wizyta"
+          }
+      ]
       }
     `}
         </script>
