@@ -13,7 +13,7 @@ interface DisasesProps{
 
 export const DisasesPage:React.FC<DisasesProps> =({id})=>{
     const { t } = useTranslation("disasesTranslation");
-    const filteredList = indications.diseases.filter((item, index)=> index !== id)
+    const filteredList = indications.diseases.filter((_, index)=> index !== id)
 
     return (
         <div className="disases-page-wrapper">

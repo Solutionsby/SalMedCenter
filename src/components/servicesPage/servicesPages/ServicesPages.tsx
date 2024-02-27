@@ -20,7 +20,7 @@ interface priceObject {
 
 export const ServicesPages: React.FC<priceObject> = ({ content, isFirstService,}) => {
   const { t } = useTranslation("serviceSection");
-  const filtredList = services.filter((item, index)=> index !== content.id)
+  const filtredList = services.filter((_, index)=> index !== content.id)
   const { currentLanguage} = useLanguage();
   console.log(currentLanguage)
   return (
