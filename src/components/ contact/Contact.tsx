@@ -18,7 +18,7 @@ export const Contact = () => {
           name="description"
           content={t("Helmet.metaDescryptionContact")}
         ></meta>
-        <link rel="canonical" href="https://gabinet.sal-med.pl" />
+        <link rel="canonical" href="https://www.centrum.sal-med.pl" />
         <meta name="robots" content="index, follow" />
         <script type="application/ld+json">
           {`
@@ -35,7 +35,7 @@ export const Contact = () => {
             "addressCountry": "Polska"
         },
         "telephone": "+48-785-427-424",
-        "url": "http://www.gabinet.sal-med.pl",
+        "url": "http://www.centrum.sal-med.pl",
         "openingHours": [
             {
                 "@type": "OpeningHoursSpecification",
@@ -79,31 +79,31 @@ export const Contact = () => {
                 "closes": "closed"
             }
         ],
-        "medicalSpecialty": ["pediatra", "internista"],
+        "medicalSpecialty": ["Lekarz", "Marichuana Lecznicza"],
         "founder": {
             "@type": "Person",
             "name": "Adam Salbert",
             "jobTitle": "Lekarz Medycyny",
-            "specialty": "Pediatra"
+            "specialty": "Leczenie Marihuana leczniczą"
         },
         "medicalService": [
-            {
-                "@type": "MedicalProcedure",
-                "name": "Pediatria wizyta infekcyjna"
-            },
-            {
-                "@type": "MedicalProcedure",
-                "name": "Pediatria wizyta dzieci zdrowych"
-            },
-            {
-                "@type": "MedicalProcedure",
-                "name": "Internista wizyta infekcyjna"
-            },
-            {
-                "@type": "MedicalProcedure",
-                "name": "Internista wizyta bez objawów infekcji"
-            }
-        ]
+          {
+              "@type": "MedicalProcedure",
+              "name": "Wizyta pierwszorazowa"
+          },
+          {
+              "@type": "MedicalProcedure",
+              "name": "Wizyta recepturowa"
+          },
+          {
+              "@type": "MedicalProcedure",
+              "name": "Druga wizyta"
+          },
+          {
+              "@type": "MedicalProcedure",
+              "name": "Kolejna wizyta"
+          }
+      ]
       }
     `}
         </script>

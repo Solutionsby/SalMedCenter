@@ -90,7 +90,7 @@ export const MainPage: React.FC = () => {
                 "closes": "closed"
             }
         ],
-        "medicalSpecialty": ["pediatra", "internista"],
+        "medicalSpecialty": ["Lekarz", "Marichuana Lecznicza"],
         "founder": {
             "@type": "Person",
             "name": "Adam Salbert",
