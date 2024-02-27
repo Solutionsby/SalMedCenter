@@ -11,7 +11,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-image 0.5s ease; // Dodana właściwość transition
+    transition: background-image 0.5s ease;
     .slider-dots-wrapper {
       display: flex;
       align-items: center;
@@ -19,6 +19,7 @@
       margin-bottom: 2vh;
       .dot {
         margin-right: 10px;
+        color:#EAEAEA;
         cursor: pointer;
         &.active {
           color: $primary-color;
