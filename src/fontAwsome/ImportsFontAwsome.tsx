@@ -11,7 +11,8 @@ import {
     faCannabis,
     faFileMedical,
     faHandHoldingMedical,
-    faTriangleExclamation
+    faTriangleExclamation,
+    faClock
   } from "@fortawesome/free-solid-svg-icons";
 
   library.add(
@@ -26,5 +27,6 @@ import {
     faCannabis,
     faFileMedical,
     faHandHoldingMedical,
-    faTriangleExclamation
+    faTriangleExclamation,
+    faClock
   );

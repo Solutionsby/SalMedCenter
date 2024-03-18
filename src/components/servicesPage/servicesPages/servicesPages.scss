@@ -7,6 +7,8 @@
   margin-top: $nav-height;
   .header-blend {
     display: flex;
+    position: relative;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { slides } from "../db/slides.json";
 import useProgressiveImage from "./UseProgrsiveImage";
 import "./slider.scss";
+import { Registration } from "../registration/Registration";
 
 export const Slider = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -23,6 +24,7 @@ export const Slider = () => {
         className="slider"
         style={{ backgroundImage: `url(${imageUrl})` }}
       >
+        <Registration />
         <div className="slider-dots-wrapper">
           {slides.map((_slide, slideIndex) => (
             <div

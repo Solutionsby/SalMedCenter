@@ -1,0 +1,20 @@
+@import '../../assets/constant.scss';
+
+
+.regestration-wrapper{
+    position: absolute;
+    top:2vh;
+    right: 2vw;
+    padding: 5px;
+    background-color: rgba(0,0,0,0.2);
+    border: 2px solid $primary-color;
+    border-radius: $border;
+    a{  
+        padding: 5px 5px;
+        font-size: 2vh;
+        color: white;
+        svg{
+            margin-right: 20px;
+        }
+    }
+}

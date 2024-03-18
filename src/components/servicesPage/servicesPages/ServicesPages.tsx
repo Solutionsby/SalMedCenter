@@ -7,6 +7,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { Link } from "react-router-dom";
 import "./servicesPages.scss";
 import { useLanguage } from "../../../context/Context";
+import { Registration } from "../../registration/Registration";
 
 interface priceObject {
   content: {
@@ -27,6 +28,7 @@ export const ServicesPages: React.FC<priceObject> = ({ content, isFirstService,}
     <div className="services-pages-wrapper">
       <Header image={content.headerImg} className="header-service-page">
         <div className="header-blend">
+          <Registration />
           <h1>{t(content.visitHeader)}</h1>
         </div>
       </Header>
