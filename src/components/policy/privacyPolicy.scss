@@ -1,4 +1,4 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
 .privacy-policy-wrapper {
   display: flex;
   position: fixed;

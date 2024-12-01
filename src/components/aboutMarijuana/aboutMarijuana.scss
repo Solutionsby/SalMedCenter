@@ -1,4 +1,4 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
 .about-marijuana-wrapper{
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     justify-content: start;
     align-items: start;
     h1{
-        color:$primary-color;
+        color:constants.$primary-color;
         text-align: start;
     }
     .about-marijuana-wrapper-paragraf{

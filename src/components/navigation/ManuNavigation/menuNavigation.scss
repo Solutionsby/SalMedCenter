@@ -1,9 +1,9 @@
-@import "../../../assets/constant.scss";
+@use "../../../assets/constant.scss" as constants;
 
 .menu-navigation {
   display: flex;
   position: fixed;
-  top: calc($nav-height - 1vh);
+  top: calc(constants.$nav-height - 1vh);
   bottom: 0;
   right: 1000vw;
   width: 100%;
@@ -22,13 +22,13 @@
     height: 85%;
     list-style: none;
     li {
-      font-family: $font;
+      font-family: constants.$font;
       text-transform: uppercase;
       font-size: 26px;
       font-weight: bold;
       cursor: pointer;
       a {
-        color: $primary-color;
+        color: constants.$primary-color;
       }
       }
     }
@@ -36,10 +36,10 @@
 .button-menu-contact{
   width: 100%;
   height: 10vh;
-  border-radius: $border;
-  border: 1px solid $primary-color;
+  border-radius: constants.$border;
+  border: 1px solid constants.$primary-color;
   a{
-    color: $primary-color;
+    color: constants.$primary-color;
     font-size: 26px;
     font-weight: bold;
     width: 100%;

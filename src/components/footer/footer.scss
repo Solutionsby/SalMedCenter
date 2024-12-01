@@ -1,4 +1,4 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
 
 .footer-wrapper-hide {
   display: none;
@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: $primary-color;
+  background-color: constants.$primary-color;
   .privacy-policy {
     align-self: center;
     color: white;

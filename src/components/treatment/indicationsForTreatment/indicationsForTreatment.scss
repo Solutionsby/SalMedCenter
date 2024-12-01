@@ -1,4 +1,4 @@
-@import "../../../assets/constant.scss";
+@use "../../../assets/constant.scss" as constants;
 .indications-wrapper{
     margin-top: 10vh;
     .warning{
@@ -6,7 +6,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        border-radius: $border;
+        border-radius: constants.$border;
         width: 90%;
         height: 50vh;
         margin: 2vh 5%;
@@ -86,8 +86,8 @@
         align-items: center;
         width: 45%;
         height: 10vh;
-        background-color: $primary-color;
-        border-radius: $border;
+        background-color: constants.$primary-color;
+        border-radius: constants.$border;
     }
 }
 

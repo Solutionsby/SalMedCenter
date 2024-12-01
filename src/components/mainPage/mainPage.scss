@@ -1,8 +1,9 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
+
 .main-page-wrapper {
   display: flex;
   flex-direction: column;
-  margin-top: $nav-height;
+  margin-top: constants.$nav-height;
   width: 100%;
   background-color: #fff;
   .main-page-header {

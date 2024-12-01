@@ -1,4 +1,4 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
 
 .button-wrapper{
     a{  display: flex;
@@ -6,14 +6,14 @@
         align-items: center;
         width: 99%;
         height: 100%;
-        color:$secendary-color;
+        color:constants.$secendary-color;
     }
 }
 
 .button-wrapper.treatment{
-    border-radius: $border;
-    background-color: $primary-color;
-    color: $secendary-color;
+    border-radius: constants.$border;
+    background-color: constants.$primary-color;
+    color: constants.$secendary-color;
     margin-top: 2vh;
     height: 20vh;
     width: 100%;
@@ -24,13 +24,13 @@
 .button-wrapper.contraindications{
     width: 90%;
     height: 10vh;
-    background-color: $secendary-color;
+    background-color: constants.$secendary-color;
     font-size: 2.1vh;
-    border: 1px solid $primary-color;
+    border: 1px solid constants.$primary-color;
     margin: 2vh 5%;
-    border-radius: $border;
+    border-radius: constants.$border;
     a{
-        color: $primary-color;
+        color: constants.$primary-color;
     }
 
 }
@@ -41,8 +41,8 @@
     align-items: center;
     width: 45%;
     height: 10vh;
-    background-color: $primary-color;
-    border-radius: $border;
+    background-color: constants.$primary-color;
+    border-radius: constants.$border;
     font-size: 2.1vh;
 }
 .contradications-button{
@@ -52,22 +52,22 @@
     align-content: center;
     width: 45%;
     height: 10vh;
-    border-radius: $border;
+    border-radius: constants.$border;
     border:1px solid black;
-    a{color:$primary-color;}
+    a{color:constants.$primary-color;}
 }
 .indications{
     width: 95%;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: $primary-color;
+    background-color: constants.$primary-color;
     height: 10vh;
     border: 1px solid black;
-    border-radius: $border;
+    border-radius: constants.$border;
     margin: 2vh 2.5%;
     a{
-        color: $secendary-color;
+        color: constants.$secendary-color;
     }
 
 }

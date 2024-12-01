@@ -1,4 +1,4 @@
-@import "../../../../assets/constant.scss";
+@use "../../../../assets/constant.scss" as constants;
 .menu-navigation-landscep-wrapper {
   display: flex;
   align-items: center;
@@ -14,7 +14,7 @@
       display: inline;
     }
     a {
-      font-family: $font;
+      font-family: constants.$font;
       color: black;
       font-size: 1vw;
       font-weight: 400;
@@ -26,7 +26,7 @@
         left: 50%;
         width: 0;
         height: 2px;
-        background-color: $primary-color;
+        background-color: constants.$primary-color;
         transition:width 0.3s ease, left 0.3s ease; 
       }
       &:hover::after{

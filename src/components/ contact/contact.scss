@@ -1,4 +1,4 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
 .contact-wrapper {
   display: flex;
   flex-direction: column;
@@ -22,17 +22,17 @@
     h2 {
       text-align: left;
       color: black;
-      font-family: $font;
+      font-family: constants.$font;
     }
     a {
       width: 90%;
       font-size: 20px;
       text-align: left;
       color: black;
-      font-family: $secendary-font;
+      font-family: constants.$secendary-font;
       svg {
         margin-right: 10px;
-        color: $primary-color;
+        color: constants.$primary-color;
       }
     }
     a:visited {
@@ -43,7 +43,7 @@
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .contact-wrapper {
     flex-direction: row;
-    margin-top: $nav-height-landscape;
+    margin-top: constants.$nav-height-landscape;
     .contact-description-wrapper {
       width: 45%;
       gap: 2px;
@@ -63,7 +63,7 @@
   .contact-wrapper {
     flex-direction: row;
     min-height: 80vh;
-    margin-top: $nav-height;
+    margin-top: constants.$nav-height;
     .contact-description-wrapper {
       width: 45%;
       gap: 2px;
@@ -83,7 +83,7 @@
   .contact-wrapper {
     flex-direction: row;
     min-height: 80vh;
-    margin-top: $nav-height;
+    margin-top: constants.$nav-height;
     .contact-description-wrapper {
       width: 45%;
       gap: 2px;

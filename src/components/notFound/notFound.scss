@@ -1,4 +1,4 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
 
 
 .page-not-found{
@@ -28,7 +28,7 @@
     flex-direction: column;
     row-gap: 2vh;
     a{
-        color:$primary-color;
+        color:constants.$primary-color;
         font-size: 30px;
         text-transform: uppercase;
         cursor: pointer;

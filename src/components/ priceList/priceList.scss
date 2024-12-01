@@ -1,7 +1,8 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
+
 .price-list-wrapper {
   display: flex;
-  margin-top: $nav-height;
+  margin-top: constants.$nav-height;
   align-items: center;
   flex-direction: column;
   background-color: #fff;
@@ -21,7 +22,7 @@
       margin: 10px 0;
       width: 98%;
       h4 {
-        font-family: $font;
+        font-family: constants.$font;
         text-align: left;
         color: #000;
       }
@@ -32,13 +33,13 @@
         width: 98%;
         p {
           flex-grow: 1;
-          font-family: $secendary-font;
+          font-family: constants.$secendary-font;
           color: #000;
         }
         .line {
           height: 2px;
           flex-grow: 8;
-          background-color: $primary-color;
+          background-color: constants.$primary-color;
         }
       }
     }
@@ -46,7 +47,7 @@
 }
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .price-list-wrapper {
-    margin-top: $nav-height-landscape;
+    margin-top: constants.$nav-height-landscape;
     flex-direction: row;
     justify-content: space-around;
     .price-list {
@@ -59,7 +60,7 @@
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .price-list-wrapper {
-    margin-top: $nav-height;
+    margin-top: constants.$nav-height;
     flex-direction: row;
     justify-content: space-around;
     .price-list {
@@ -72,7 +73,7 @@
 }
 @media screen and (min-width: 1024px) and (orientation: landscape) {
   .price-list-wrapper {
-    margin-top: $nav-height;
+    margin-top: constants.$nav-height;
     flex-direction: row;
     justify-content: space-around;
     height: 80vh;

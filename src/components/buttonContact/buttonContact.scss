@@ -1,4 +1,4 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
 .button-wrapper-contact {
   display: flex;
   transition: 0.8s;
@@ -7,26 +7,26 @@
   border-radius: 10px;
   button.button-call {
     display: flex;
-    border-radius: $border;
-    color: $primary-color;
-    background-color: $secendary-color;
+    border-radius: constants.$border;
+    color: constants.$primary-color;
+    background-color: constants.$secendary-color;
     transition: 0.4s;
     width: 55vw;
     height: 10vh;
     font-size: 24px;
     font-weight: bold;
     &:hover {
-      background-color: $primary-color;
+      background-color: constants.$primary-color;
       color: white;
     }
     .services-button-contact{
-      background-color: $primary-color;
+      background-color: constants.$primary-color;
     }
     a {
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $primary-color;
+      color: constants.$primary-color;
       width: 100%;
       height: 100%;
       transition: 1s;

@@ -1,4 +1,4 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
 .slider-wrapper {
   width: 100%;
   height: 100%;
@@ -23,7 +23,7 @@
         color:#EAEAEA;
         cursor: pointer;
         &.active {
-          color: $primary-color;
+          color:constants.$primary-color;
         }
       }
     }

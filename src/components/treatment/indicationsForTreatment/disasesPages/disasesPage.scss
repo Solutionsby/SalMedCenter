@@ -1,4 +1,4 @@
-@import "../../../../assets/constant.scss";
+@use "../../../../assets/constant.scss" as constants;
 .disases-page-wrapper{
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     div.line{
         height: 1px;
         width: 95%;
-        background-color: $primary-color;
+        background-color: constants.$primary-color;
         margin: 5px 2.5%; 
     }
 }
@@ -15,11 +15,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: $border;
+    border-radius: constants.$border;
     height: 40%;
     min-width: 50%;
-    background-color: rgba($primary-color, 0.6);
-    color: $secendary-color;
+    background-color: rgba(constants.$primary-color, 0.6);
+    color: constants.$secendary-color;
     z-index: 2;
     h2{
         padding: 10px;

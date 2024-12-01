@@ -1,4 +1,4 @@
-@import "../../../assets/constant.scss";
+@use "../../../assets/constant.scss" as constants;
 
 .privacy-policy-text-wrapper {
   display: flex;
@@ -8,8 +8,8 @@
   justify-content: center;
   row-gap: 10px;
   color: black;
-  font-family: $secendary-font;
-  margin-top: calc($nav-height + 2vh);
+  font-family: constants.$secendary-font;
+  margin-top: calc(constants.$nav-height + 2vh);
   margin-bottom: 20px;
   .privacy-policy-text-entry {
     display: flex;
@@ -33,7 +33,7 @@
       h4 {
         width: 100%;
         text-transform: uppercase;
-        font-family: $font;
+        font-family: constants.$font;
       }
       p {
         width: 95%;

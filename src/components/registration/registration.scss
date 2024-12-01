@@ -1,4 +1,4 @@
-@import '../../assets/constant.scss';
+@use '../../assets/constant.scss' as constants;
 
 
 .regestration-wrapper{
@@ -7,8 +7,8 @@
     right: 2vw;
     padding: 5px;
     background-color: rgba(0,0,0,0.2);
-    border: 2px solid $primary-color;
-    border-radius: $border;
+    border: 2px solid constants.$primary-color;
+    border-radius: constants.$border;
     a{  
         padding: 5px 5px;
         font-size: 2vh;

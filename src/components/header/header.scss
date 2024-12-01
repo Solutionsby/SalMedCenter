@@ -1,4 +1,4 @@
-@import "../../assets/constant.scss";
+@use "../../assets/constant.scss" as constants;
 .header-wrapper {
   display: flex;
   justify-content: center;
